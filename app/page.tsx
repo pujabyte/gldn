@@ -502,7 +502,7 @@ export default function HomePage() {
             {/* Left: copy */}
             <div>
               <div className="tag" style={{ marginBottom: 24 }}>
-                Real World Asset · BNB Smart Chain
+                Real World Asset · BNB Smart Chain · LayerZero OFT
               </div>
 
               <h1 className="text-display-xl" style={{ marginBottom: 20 }}>
@@ -531,8 +531,10 @@ export default function HomePage() {
                   letterSpacing: "-0.01em",
                 }}
               >
-                IDDF-MSCI gives you fractional exposure to Indonesia&apos;s premier Gold Plus Fund —
-                managed by <strong style={{ color: "var(--text-primary)", fontWeight: 500 }}>STAR Asset Management</strong>,
+                IDDF-MSCI gives you fractional exposure to the{" "}
+                <strong style={{ color: "var(--text-primary)", fontWeight: 500 }}>MSCI ID Digital Funds</strong> —
+                a professionally managed Equity-Gold Rotation strategy by{" "}
+                <strong style={{ color: "var(--text-primary)", fontWeight: 500 }}>STAR Asset Management</strong>,
                 IDR 30T+ AUM, available 24/7 on-chain.
               </p>
 
@@ -555,9 +557,9 @@ export default function HomePage() {
               >
                 {[
                   { label: "AUM STAR AM", value: "IDR 30T+" },
-                  { label: "Current NAV", value: "$100.00" },
-                  { label: "25Y CAGR", value: "~12%" },
-                  { label: "Token Holders", value: "1,200+" },
+                  { label: "Target AUM", value: "IDR 200B" },
+                  { label: "25Y CAGR", value: "11.2%" },
+                  { label: "Return/Risk", value: "1.11" },
                 ].map((m) => (
                   <div key={m.label}>
                     <div
@@ -640,8 +642,8 @@ export default function HomePage() {
               </span>
             </h2>
             <p style={{ fontSize: 17, color: "var(--text-tertiary)", maxWidth: 520, margin: "0 auto", lineHeight: 1.7 }}>
-              IDDF-MSCI bridges world-class institutional fund management with blockchain accessibility —
-              open to everyone, from as little as IDR 100,000.
+              IDDF-MSCI bridges the MSCI ID Digital Funds — STAR Asset Management&apos;s Equity-Gold Rotation strategy —
+              with blockchain accessibility. Open to everyone, from as little as IDR 100,000.
             </p>
           </div>
 
@@ -661,7 +663,7 @@ export default function HomePage() {
             <ValueCard
               icon={Shield}
               title="Expert Management"
-              desc="Managed by STAR Asset Management — IDR 30 Trillion AUM, 8M+ investor accounts, ISO 9001/27001/37001 certified."
+              desc="MSCI ID Digital Funds managed by STAR Asset Management — IDR 30T+ AUM, 8M+ investor accounts, ISO 9001/27001/37001 certified."
               delay={160}
             />
             <ValueCard
@@ -714,7 +716,7 @@ export default function HomePage() {
                 {[
                   { name: "PT. Sejahtera Bersama Nano", role: "Token Issuer" },
                   { name: "STAR Asset Management", role: "Investment Manager" },
-                  { name: "IDDF-MSCI Token (BEP-20)", role: "On-Chain Representation" },
+                  { name: "IDDF-MSCI Token (BEP-20 · OFT)", role: "On-Chain Representation" },
                   { name: "Exchange Partners", role: "Distribution" },
                   { name: "Investor", role: "End User" },
                 ].map((node, i, arr) => (
@@ -745,15 +747,15 @@ export default function HomePage() {
               <StepCard
                 num="01"
                 title="Smart Rotation Strategy"
-                desc="A quantitative algorithm automatically allocates 100% of the portfolio between global gold and equity based on the strongest trend signal. Target annualized volatility: 10%."
-                detail="Gold + Equity · Quantitative"
+                desc="A quantitative algorithm allocates 100% of the portfolio between MSCI World Islamic Top 50 Index (equity) and iShares Gold Trust / IAU (gold) based on the strongest trend signal. Annualized volatility target: 10%."
+                detail="MSCI Islamic Top 50 · IAU · Quantitative"
                 delay={0}
               />
               <StepCard
                 num="02"
                 title="Transparent Tokenization"
-                desc="Each IDDF-MSCI token represents fractional ownership in a Discretionary Mandate (KPD). Tokens are minted on capital entry and burned on redemption — all recorded on-chain."
-                detail="BEP-20 · NAV-Based Pricing"
+                desc="Each IDDF-MSCI token represents fractional ownership in the MSCI ID Digital Funds Discretionary Mandate (KPD). Tokens are minted on capital entry and burned on redemption — all recorded on BNB Smart Chain."
+                detail="BEP-20 · LayerZero OFT · NAV Pricing"
                 delay={100}
               />
               <StepCard
@@ -810,18 +812,18 @@ export default function HomePage() {
                 Proven
               </span>
             </h2>
-            <p style={{ fontSize: 15, color: "var(--text-tertiary)", maxWidth: 420, margin: "0 auto", lineHeight: 1.7 }}>
-              Backtest simulation of the Gold Plus Fund strategy vs. benchmarks over 25 years.
+            <p style={{ fontSize: 15, color: "var(--text-tertiary)", maxWidth: 460, margin: "0 auto", lineHeight: 1.7 }}>
+              Simulation of the MSCI ID Digital Funds Equity-Gold Rotation strategy vs. benchmarks — March 2001 to April 2026, net total returns in USD.
             </p>
           </div>
 
           {/* Big metrics row */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             {[
-              { label: "25Y CAGR", value: "~12.4%", sub: "Gold Plus Strategy", highlight: true },
-              { label: "Max Drawdown", value: "-18.2%", sub: "vs -57% Equity Only" },
-              { label: "Sharpe Ratio", value: "0.87", sub: "Risk-adjusted return" },
-              { label: "Win Rate", value: "73%", sub: "Positive years" },
+              { label: "Annualized Return", value: "11.2%", sub: "Gold & Equity Rotation", highlight: true },
+              { label: "Annualized Risk", value: "10.1%", sub: "Volatility (USD)" },
+              { label: "Return/Risk Ratio", value: "1.11", sub: "vs 0.83 Gold · 0.63 Equity" },
+              { label: "Simultaneous Drawdown", value: "~7%", sub: "Both assets down at once" },
             ].map((m) => (
               <div
                 key={m.label}
@@ -850,13 +852,12 @@ export default function HomePage() {
           {/* Comparison bars */}
           <div className="card p-6 reveal">
             <div style={{ fontSize: 13, fontWeight: 500, color: "var(--text-primary)", marginBottom: 20, letterSpacing: "-0.01em" }}>
-              Comparative CAGR — 25-Year Simulation
+              Annualized Return — 25-Year Simulation (Mar 2001 – Apr 2026)
             </div>
             <div className="space-y-5">
-              <PerfBar label="IDDF-MSCI Gold Plus Strategy" value={12.4} max={15} color="var(--gold-bright)" />
-              <PerfBar label="Gold Only (XAU/USD)" value={8.1} max={15} color="rgba(212,175,55,0.5)" />
-              <PerfBar label="MSCI World Equity" value={9.6} max={15} color="rgba(99,138,198,0.6)" />
-              <PerfBar label="60/40 Portfolio" value={7.2} max={15} color="rgba(99,138,198,0.35)" />
+              <PerfBar label="Gold & Equity Rotation (IDDF-MSCI)" value={11.2} max={14} color="var(--gold-bright)" />
+              <PerfBar label="iShares Gold Trust (IAU)" value={8.3} max={14} color="rgba(212,175,55,0.5)" />
+              <PerfBar label="MSCI World Islamic Top 50" value={6.2} max={14} color="rgba(99,138,198,0.6)" />
             </div>
 
             <div
@@ -885,7 +886,7 @@ export default function HomePage() {
                   <div style={{ fontSize: 12, color: "var(--text-tertiary)", marginTop: 4 }}>Gold ↔ Equity Correlation</div>
                 </div>
                 <div style={{ fontSize: 13, color: "var(--text-tertiary)", lineHeight: 1.6, maxWidth: 200 }}>
-                  Combining two uncorrelated assets delivers optimal diversification.
+                  Gold and equities exhibit near-zero long-term correlation — a powerful portfolio diversification tool.
                 </div>
               </div>
             </div>
@@ -1088,20 +1089,20 @@ export default function HomePage() {
                 icon: Shield,
                 title: "Token Issuer",
                 name: "PT. Sejahtera Bersama Nano",
-                points: ["IDDF-MSCI token issuer", "KYC/AML compliance", "KPD arrangement", "Commercial operations"],
+                points: ["IDDF-MSCI token issuer", "KYC/AML compliance", "KPD (MSCI ID Digital Funds)", "Commercial operations"],
               },
               {
                 icon: TrendingUp,
                 title: "Investment Manager",
                 name: "STAR Asset Management",
-                points: ["IDR 30T+ AUM", "8M+ Investor Accounts", "#13 Fixed Income MF", "ISO 9001/27001 certified"],
+                points: ["IDR 30T+ AUM", "8M+ Investor Accounts", "Manages MSCI ID Digital Funds KPD", "ISO 9001/27001/37001 certified"],
                 featured: true,
               },
               {
                 icon: Lock,
                 title: "Blockchain Security",
                 name: "BNB Smart Chain (BEP-20)",
-                points: ["Multi-sig governance", "OpenZeppelin standards", "On-chain transparency", "Smart contract audited"],
+                points: ["Multi-sig governance", "OpenZeppelin standards", "LayerZero OFT omnichain", "Smart contract audited"],
               },
             ].map((col) => (
               <div
@@ -1140,6 +1141,29 @@ export default function HomePage() {
             ))}
           </div>
 
+          {/* Fee structure */}
+          <div className="card p-6 reveal mb-4">
+            <div style={{ fontSize: 12, color: "var(--text-muted)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 16 }}>
+              Fee Structure
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                { fee: "Asset Management Fee", range: "100 – 150 bps", note: "Charged by STAR AM" },
+                { fee: "Custodian Bank Fee", range: "10 – 25 bps", note: "Custody & settlement" },
+                { fee: "Exchange / Distribution Fee", range: "Disclosed by Exchange", note: "Per exchange platform" },
+              ].map((f) => (
+                <div key={f.fee} style={{ padding: "12px 0", borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
+                  <div style={{ fontSize: 12, color: "var(--text-tertiary)", marginBottom: 4 }}>{f.fee}</div>
+                  <div style={{ fontFamily: "monospace", fontSize: 14, fontWeight: 600, color: "var(--gold-bright)", marginBottom: 2 }}>{f.range}</div>
+                  <div style={{ fontSize: 11, color: "var(--text-muted)" }}>{f.note}</div>
+                </div>
+              ))}
+            </div>
+            <div style={{ fontSize: 11, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.6 }}>
+              All fees are embedded in the daily NAV per Unit. No additional subscription or redemption fees at the token level beyond what is disclosed by the exchange platform.
+            </div>
+          </div>
+
           {/* Stats row */}
           <div className="card p-6 reveal">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
@@ -1163,6 +1187,51 @@ export default function HomePage() {
 
       <div className="divider" />
 
+      {/* ── ROADMAP ── */}
+      <section className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12 reveal">
+            <div className="tag" style={{ display: "inline-flex", marginBottom: 16 }}>Roadmap</div>
+            <h2 className="text-heading-1" style={{ marginBottom: 12 }}>
+              Path to{" "}
+              <span style={{ background: "linear-gradient(135deg, #F5C842, #D4AF37)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                Launch
+              </span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 reveal">
+            {[
+              { phase: "Phase 1", title: "Index Development", timeline: "1 Month", desc: "Design and finalize the Equity-Gold Rotation quantitative strategy and index methodology." },
+              { phase: "Phase 2", title: "Regulatory Approval", timeline: "3 Months", desc: "Legal structuring of the KPD. Obtain OJK regulatory approvals for the tokenized product." },
+              { phase: "Phase 3", title: "Book Building", timeline: "1 Month", desc: "Investor education, marketing campaign, and pre-subscription from anchor investors." },
+              { phase: "Phase 4", title: "Launch", timeline: "Q3 2026", desc: "Integration with licensed Crypto Exchanges. Live token issuance. Target AUM: IDR 200 Billion.", highlight: true },
+              { phase: "Phase 5", title: "Omnichain Expansion", timeline: "H1 2027", desc: "Ethereum and additional chain deployments via LayerZero OFT." },
+            ].map((p) => (
+              <div
+                key={p.phase}
+                className={p.highlight ? "card-gold p-5" : "card p-5"}
+                style={{ position: "relative" }}
+              >
+                {p.highlight && (
+                  <div style={{
+                    position: "absolute", top: -1, left: "50%", transform: "translateX(-50%)",
+                    background: "linear-gradient(90deg, #D4AF37, #F5C842)",
+                    color: "#080706", fontSize: 9, fontWeight: 700,
+                    padding: "2px 10px", borderRadius: "0 0 5px 5px", letterSpacing: "0.08em",
+                  }}>LAUNCH</div>
+                )}
+                <div style={{ fontSize: 10, color: "var(--text-muted)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 6 }}>{p.phase}</div>
+                <div style={{ fontFamily: "monospace", fontSize: 12, fontWeight: 600, color: p.highlight ? "var(--gold-bright)" : "var(--gold-mid)", marginBottom: 8 }}>{p.timeline}</div>
+                <div style={{ fontSize: 13, fontWeight: 500, color: "var(--text-primary)", marginBottom: 6 }}>{p.title}</div>
+                <div style={{ fontSize: 12, color: "var(--text-tertiary)", lineHeight: 1.6 }}>{p.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="divider" />
+
       {/* ── FAQ PREVIEW ── */}
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-6">
@@ -1175,7 +1244,7 @@ export default function HomePage() {
             {[
               {
                 q: "How is IDDF-MSCI different from regular cryptocurrency?",
-                a: "IDDF-MSCI is an RWA token — its value tracks a professional fund's NAV, not market speculation. Every token is backed by real assets held in a Discretionary Mandate managed by STAR AM.",
+                a: "IDDF-MSCI is an RWA token — its value tracks the daily NAV per Unit of the MSCI ID Digital Funds, a Discretionary Mandate (KPD) managed by STAR Asset Management. There is no secondary market speculation or premium.",
               },
               {
                 q: "What is the minimum investment?",

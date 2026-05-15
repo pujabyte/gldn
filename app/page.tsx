@@ -163,20 +163,20 @@ function TokenVisual() {
           stroke="rgba(255,240,120,0.18)" strokeWidth="0.75"
         />
 
-        {/* ── G lettermark ── */}
+        {/* ── M lettermark ── */}
         <text
           x="160" y="179"
           textAnchor="middle"
           style={{
             fontFamily: "Cormorant Garamond, Georgia, serif",
-            fontSize: 58,
+            fontSize: 52,
             fontWeight: 400,
             fill: "rgba(8,7,6,0.82)",
             letterSpacing: "-0.02em",
             userSelect: "none",
           }}
         >
-          G
+          M
         </text>
 
         {/* Coin highlight (specular) */}
@@ -307,10 +307,10 @@ function Nav() {
               display: "flex", alignItems: "center", justifyContent: "center",
             }}
           >
-            <span style={{ color: "#080706", fontWeight: 700, fontSize: 12, letterSpacing: "-0.02em" }}>G</span>
+            <span style={{ color: "#080706", fontWeight: 700, fontSize: 11, letterSpacing: "-0.02em" }}>M</span>
           </div>
           <span style={{ color: "var(--text-primary)", fontSize: 15, fontWeight: 600, letterSpacing: "-0.02em" }}>
-            GLDN
+            IDDF-MSCI
           </span>
         </a>
 
@@ -497,7 +497,6 @@ export default function HomePage() {
       >
         <div className="hero-gradient" />
 
-
         <div className="max-w-6xl mx-auto px-6 w-full py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: copy */}
@@ -507,7 +506,7 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-display-xl" style={{ marginBottom: 20 }}>
-                Strategi{" "}
+                Professional{" "}
                 <em
                   style={{
                     fontStyle: "italic",
@@ -519,7 +518,7 @@ export default function HomePage() {
                 >
                   Gold‑Equity
                 </em>{" "}
-                Profesional, Kini On‑Chain
+                Strategy, Now On‑Chain
               </h1>
 
               <p
@@ -532,9 +531,9 @@ export default function HomePage() {
                   letterSpacing: "-0.01em",
                 }}
               >
-                GLDN memberi Anda eksposur fraksional ke Indonesia&apos;s premier Gold Plus Fund —
-                dikelola oleh <strong style={{ color: "var(--text-primary)", fontWeight: 500 }}>STAR Asset Management</strong>,
-                Rp 30T+ AUM, tersedia 24/7 on-chain.
+                IDDF-MSCI gives you fractional exposure to Indonesia&apos;s premier Gold Plus Fund —
+                managed by <strong style={{ color: "var(--text-primary)", fontWeight: 500 }}>STAR Asset Management</strong>,
+                IDR 30T+ AUM, available 24/7 on-chain.
               </p>
 
               {/* CTA row */}
@@ -544,7 +543,7 @@ export default function HomePage() {
                   Download Whitepaper
                 </button>
                 <a href="#about" className="btn-ghost flex items-center gap-2" style={{ textDecoration: "none" }}>
-                  Pelajari Lebih Lanjut
+                  Learn More
                   <ArrowRight size={13} />
                 </a>
               </div>
@@ -555,10 +554,10 @@ export default function HomePage() {
                 style={{ borderTop: "1px solid rgba(212,175,55,0.1)" }}
               >
                 {[
-                  { label: "AUM STAR AM", value: "Rp 30T+" },
+                  { label: "AUM STAR AM", value: "IDR 30T+" },
                   { label: "Current NAV", value: "$100.00" },
                   { label: "25Y CAGR", value: "~12%" },
-                  { label: "GLDN Holders", value: "1,200+" },
+                  { label: "Token Holders", value: "1,200+" },
                 ].map((m) => (
                   <div key={m.label}>
                     <div
@@ -605,7 +604,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6 py-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <span style={{ fontSize: 11, color: "var(--text-muted)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-              Didukung oleh
+              Backed by
             </span>
             {[
               { name: "STAR Asset Management", tag: "Investment Manager" },
@@ -626,9 +625,9 @@ export default function HomePage() {
       <section id="about" className="py-32">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16 reveal">
-            <div className="tag" style={{ display: "inline-flex", marginBottom: 16 }}>Mengapa GLDN?</div>
+            <div className="tag" style={{ display: "inline-flex", marginBottom: 16 }}>Why IDDF-MSCI?</div>
             <h2 className="text-display" style={{ marginBottom: 16 }}>
-              Investasi Profesional,{" "}
+              Institutional Investing,{" "}
               <span
                 style={{
                   background: "linear-gradient(135deg, #F5C842, #D4AF37)",
@@ -637,38 +636,38 @@ export default function HomePage() {
                   backgroundClip: "text",
                 }}
               >
-                Tanpa Batas
+                Without Barriers
               </span>
             </h2>
             <p style={{ fontSize: 17, color: "var(--text-tertiary)", maxWidth: 520, margin: "0 auto", lineHeight: 1.7 }}>
-              GLDN menghubungkan world-class institutional fund management dengan aksesibilitas blockchain —
-              terbuka untuk semua, dari Rp 100.000.
+              IDDF-MSCI bridges world-class institutional fund management with blockchain accessibility —
+              open to everyone, from as little as IDR 100,000.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <ValueCard
               icon={BarChart3}
-              title="Akses Fraksional"
-              desc="Investasi dari nilai kecil — tidak perlu modal besar untuk akses strategi fund profesional yang biasanya hanya untuk institusi."
+              title="Fractional Access"
+              desc="Invest from a small amount — no large capital required to access professional fund strategies previously reserved for institutions."
               delay={0}
             />
             <ValueCard
               icon={Clock}
-              title="Distribusi 24/7"
-              desc="Beli dan jual kapan saja melalui exchange crypto terpercaya. Transfer on-chain BNB Smart Chain tanpa batas waktu."
+              title="24/7 Distribution"
+              desc="Buy and sell anytime through trusted crypto exchanges. On-chain transfers on BNB Smart Chain with no time restrictions."
               delay={80}
             />
             <ValueCard
               icon={Shield}
-              title="Manajemen Expert"
-              desc="Dikelola STAR Asset Management — AUM Rp 30 Triliun, 8+ juta SID, ISO 9001/27001/37001 certified."
+              title="Expert Management"
+              desc="Managed by STAR Asset Management — IDR 30 Trillion AUM, 8M+ investor accounts, ISO 9001/27001/37001 certified."
               delay={160}
             />
             <ValueCard
               icon={Lock}
-              title="Harga Transparan"
-              desc="Harga token selalu mengikuti NAV harian fund — tidak ada spekulasi pasar sekunder atau premium manipulatif."
+              title="Transparent Pricing"
+              desc="Token price always tracks the fund's daily NAV — no secondary market speculation or manipulative premiums."
               delay={240}
             />
           </div>
@@ -690,9 +689,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
             {/* Left sticky header */}
             <div className="reveal lg:sticky lg:top-24">
-              <div className="tag" style={{ marginBottom: 16 }}>Mekanisme</div>
+              <div className="tag" style={{ marginBottom: 16 }}>Mechanism</div>
               <h2 className="text-display" style={{ marginBottom: 20 }}>
-                Bagaimana{" "}
+                How{" "}
                 <span
                   style={{
                     fontStyle: "italic",
@@ -702,12 +701,12 @@ export default function HomePage() {
                     backgroundClip: "text",
                   }}
                 >
-                  GLDN
+                  IDDF-MSCI
                 </span>{" "}
-                Bekerja?
+                Works
               </h2>
               <p style={{ fontSize: 15, color: "var(--text-tertiary)", lineHeight: 1.75, marginBottom: 28 }}>
-                Tiga mekanisme utama yang membuat GLDN berbeda dari produk investasi konvensional.
+                Three core mechanisms that set IDDF-MSCI apart from conventional investment products.
               </p>
 
               {/* Structure diagram */}
@@ -715,7 +714,7 @@ export default function HomePage() {
                 {[
                   { name: "PT. Sejahtera Bersama Nano", role: "Token Issuer" },
                   { name: "STAR Asset Management", role: "Investment Manager" },
-                  { name: "GLDN Token (BEP-20)", role: "On-Chain Representation" },
+                  { name: "IDDF-MSCI Token (BEP-20)", role: "On-Chain Representation" },
                   { name: "Exchange Partners", role: "Distribution" },
                   { name: "Investor", role: "End User" },
                 ].map((node, i, arr) => (
@@ -745,22 +744,22 @@ export default function HomePage() {
             <div className="space-y-12">
               <StepCard
                 num="01"
-                title="Strategi Rotasi Cerdas"
-                desc="Algoritma kuantitatif secara otomatis mengalokasikan 100% portfolio antara emas global dan ekuitas berdasarkan trend signal terkuat. Target volatilitas 10% annualized."
+                title="Smart Rotation Strategy"
+                desc="A quantitative algorithm automatically allocates 100% of the portfolio between global gold and equity based on the strongest trend signal. Target annualized volatility: 10%."
                 detail="Gold + Equity · Quantitative"
                 delay={0}
               />
               <StepCard
                 num="02"
-                title="Tokenisasi Transparan"
-                desc="Setiap token GLDN merepresentasikan kepemilikan fraksional dalam Discretionary Mandate (KPD). Mint saat modal masuk, burn saat redemption — semua tercatat on-chain."
+                title="Transparent Tokenization"
+                desc="Each IDDF-MSCI token represents fractional ownership in a Discretionary Mandate (KPD). Tokens are minted on capital entry and burned on redemption — all recorded on-chain."
                 detail="BEP-20 · NAV-Based Pricing"
                 delay={100}
               />
               <StepCard
                 num="03"
-                title="Beli & Jual Mudah"
-                desc="Akses melalui exchange crypto licensed — deposit IDR atau stablecoin USDT/USDC, beli GLDN, pantau portofolio, redeem kapan saja dalam 2-3 hari kerja."
+                title="Simple Buy & Sell"
+                desc="Access via licensed crypto exchanges — deposit IDR or stablecoins (USDT/USDC), buy IDDF-MSCI, monitor your portfolio, and redeem anytime within 2–3 business days."
                 detail="24/7 · Fiat & Crypto"
                 delay={200}
               />
@@ -768,12 +767,12 @@ export default function HomePage() {
               {/* Allocation scenarios */}
               <div className="reveal card p-5 space-y-4" style={{ transitionDelay: "250ms" }}>
                 <div style={{ fontSize: 12, color: "var(--text-muted)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 4 }}>
-                  3 Skenario Alokasi Otomatis
+                  3 Automatic Allocation Scenarios
                 </div>
                 {[
-                  { cond: "Keduanya trending ↑↑", action: "100% ke asset paling kuat", color: "var(--gold-bright)" },
-                  { cond: "Satu asset trending ↑", action: "100% ke asset yang trending", color: "var(--gold-mid)" },
-                  { cond: "Tidak ada trend ↓→", action: "100% ke volatilitas lebih rendah", color: "var(--text-tertiary)" },
+                  { cond: "Both assets trending ↑↑", action: "100% to the strongest asset", color: "var(--gold-bright)" },
+                  { cond: "One asset trending ↑", action: "100% to the trending asset", color: "var(--gold-mid)" },
+                  { cond: "No clear trend ↓→", action: "100% to lower volatility asset", color: "var(--text-tertiary)" },
                 ].map((s) => (
                   <div key={s.cond} className="flex items-start gap-3">
                     <div style={{ width: 6, height: 6, borderRadius: "50%", background: s.color, marginTop: 5, flexShrink: 0 }} />
@@ -797,9 +796,9 @@ export default function HomePage() {
 
         <div className="max-w-6xl mx-auto px-6 relative">
           <div className="text-center mb-16 reveal">
-            <div className="tag" style={{ display: "inline-flex", marginBottom: 16 }}>Kinerja Historis</div>
+            <div className="tag" style={{ display: "inline-flex", marginBottom: 16 }}>Historical Performance</div>
             <h2 className="text-display" style={{ marginBottom: 16 }}>
-              25 Tahun{" "}
+              25 Years{" "}
               <span
                 style={{
                   background: "linear-gradient(135deg, #F5C842, #D4AF37)",
@@ -808,11 +807,11 @@ export default function HomePage() {
                   backgroundClip: "text",
                 }}
               >
-                Terbukti
+                Proven
               </span>
             </h2>
             <p style={{ fontSize: 15, color: "var(--text-tertiary)", maxWidth: 420, margin: "0 auto", lineHeight: 1.7 }}>
-              Simulasi backtest strategi Gold Plus Fund vs benchmark selama 25 tahun.
+              Backtest simulation of the Gold Plus Fund strategy vs. benchmarks over 25 years.
             </p>
           </div>
 
@@ -851,10 +850,10 @@ export default function HomePage() {
           {/* Comparison bars */}
           <div className="card p-6 reveal">
             <div style={{ fontSize: 13, fontWeight: 500, color: "var(--text-primary)", marginBottom: 20, letterSpacing: "-0.01em" }}>
-              Comparative CAGR — Simulasi 25 Tahun
+              Comparative CAGR — 25-Year Simulation
             </div>
             <div className="space-y-5">
-              <PerfBar label="GLDN Gold Plus Strategy" value={12.4} max={15} color="var(--gold-bright)" />
+              <PerfBar label="IDDF-MSCI Gold Plus Strategy" value={12.4} max={15} color="var(--gold-bright)" />
               <PerfBar label="Gold Only (XAU/USD)" value={8.1} max={15} color="rgba(212,175,55,0.5)" />
               <PerfBar label="MSCI World Equity" value={9.6} max={15} color="rgba(99,138,198,0.6)" />
               <PerfBar label="60/40 Portfolio" value={7.2} max={15} color="rgba(99,138,198,0.35)" />
@@ -878,7 +877,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             <div className="card p-5 reveal">
               <div style={{ fontSize: 11, color: "var(--text-muted)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 12 }}>
-                Korelasi Historis (25Y)
+                Historical Correlation (25Y)
               </div>
               <div className="flex items-end gap-4">
                 <div>
@@ -886,7 +885,7 @@ export default function HomePage() {
                   <div style={{ fontSize: 12, color: "var(--text-tertiary)", marginTop: 4 }}>Gold ↔ Equity Correlation</div>
                 </div>
                 <div style={{ fontSize: 13, color: "var(--text-tertiary)", lineHeight: 1.6, maxWidth: 200 }}>
-                  Kombinasi dua asset yang tidak berkorelasi = diversifikasi optimal.
+                  Combining two uncorrelated assets delivers optimal diversification.
                 </div>
               </div>
             </div>
@@ -900,7 +899,7 @@ export default function HomePage() {
                   <div style={{ fontSize: 12, color: "var(--text-tertiary)", marginTop: 4 }}>Annualized Target</div>
                 </div>
                 <div style={{ fontSize: 13, color: "var(--text-tertiary)", lineHeight: 1.6, maxWidth: 200 }}>
-                  Setiap alokasi dikalibrasi untuk mempertahankan risiko yang konsisten.
+                  Every allocation is calibrated to maintain consistent risk exposure.
                 </div>
               </div>
             </div>
@@ -915,9 +914,9 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="reveal">
-              <div className="tag" style={{ marginBottom: 16 }}>Mulai Investasi</div>
+              <div className="tag" style={{ marginBottom: 16 }}>Get Started</div>
               <h2 className="text-display" style={{ marginBottom: 20 }}>
-                3 Langkah{" "}
+                3{" "}
                 <span
                   style={{
                     background: "linear-gradient(135deg, #F5C842, #D4AF37)",
@@ -926,29 +925,30 @@ export default function HomePage() {
                     backgroundClip: "text",
                   }}
                 >
-                  Mudah
-                </span>
+                  Simple
+                </span>{" "}
+                Steps
               </h2>
               <p style={{ fontSize: 15, color: "var(--text-tertiary)", lineHeight: 1.75, marginBottom: 32 }}>
-                Dari registrasi hingga kepemilikan GLDN token, prosesnya dirancang sesederhana mungkin.
+                From registration to holding IDDF-MSCI tokens, the process is designed to be as straightforward as possible.
               </p>
 
               <div className="space-y-6">
                 {[
                   {
                     step: "1",
-                    title: "Pilih Platform Exchange",
-                    desc: "Daftar di salah satu exchange partner berlisensi OJK. Mulai dari Rp 100.000.",
+                    title: "Choose an Exchange Platform",
+                    desc: "Register on one of our OJK-licensed exchange partners. Start from as little as IDR 100,000.",
                   },
                   {
                     step: "2",
-                    title: "Lengkapi Verifikasi KYC",
-                    desc: "Upload KTP, NPWP, dan selfie. Proses approval biasanya 1–2 hari kerja.",
+                    title: "Complete KYC Verification",
+                    desc: "Upload your ID, tax number, and a selfie. Approval typically takes 1–2 business days.",
                   },
                   {
                     step: "3",
-                    title: "Beli GLDN Token",
-                    desc: "Deposit IDR atau USDT, cari GLDN, konfirmasi pembelian. Token masuk wallet Anda.",
+                    title: "Buy IDDF-MSCI Tokens",
+                    desc: "Deposit IDR or USDT, search for IDDF-MSCI, and confirm your purchase. Tokens are delivered to your wallet.",
                   },
                 ].map((s, i) => (
                   <div
@@ -989,18 +989,18 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: KYC doc list + calculator preview */}
+            {/* Right: KYC doc list + investment limits */}
             <div className="space-y-4 reveal" style={{ transitionDelay: "100ms" }}>
               <div className="card p-5">
                 <div style={{ fontSize: 12, color: "var(--text-muted)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 14 }}>
-                  Dokumen KYC yang Diperlukan
+                  Required KYC Documents
                 </div>
                 {[
-                  { doc: "KTP / Passport", note: "Foto atau scan jelas" },
-                  { doc: "NPWP", note: "Wajib untuk WNI" },
-                  { doc: "Selfie dengan KTP", note: "Real-time, tidak bisa dimanipulasi" },
-                  { doc: "Proof of Address", note: "Tagihan listrik / bank statement 3 bln" },
-                  { doc: "Sumber Dana", note: "Form disediakan oleh platform" },
+                  { doc: "National ID / Passport", note: "Clear photo or scan" },
+                  { doc: "Tax Identification Number (NPWP)", note: "Required for Indonesian residents" },
+                  { doc: "Selfie with ID", note: "Real-time, tamper-proof" },
+                  { doc: "Proof of Address", note: "Utility bill or bank statement (last 3 months)" },
+                  { doc: "Source of Funds", note: "Form provided by the platform" },
                 ].map((item) => (
                   <div
                     key={item.doc}
@@ -1028,11 +1028,11 @@ export default function HomePage() {
               {/* Investment limits */}
               <div className="card-gold p-5">
                 <div style={{ fontSize: 12, color: "var(--text-muted)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 12 }}>
-                  Minimum Investasi
+                  Minimum Investment
                 </div>
                 {[
-                  { platform: "Via Exchange Partner", min: "Rp 100.000", recommended: true },
-                  { platform: "Direct via PT. SBN", min: "Rp 10.000.000", recommended: false },
+                  { platform: "Via Exchange Partner", min: "IDR 100,000", recommended: true },
+                  { platform: "Direct via PT. SBN", min: "IDR 10,000,000", recommended: false },
                 ].map((row) => (
                   <div key={row.platform} className="flex justify-between items-center py-2.5" style={{ borderBottom: "1px solid rgba(212,175,55,0.08)" }}>
                     <div>
@@ -1063,9 +1063,9 @@ export default function HomePage() {
 
         <div className="max-w-6xl mx-auto px-6 relative">
           <div className="text-center mb-16 reveal">
-            <div className="tag" style={{ display: "inline-flex", marginBottom: 16 }}>Kepercayaan & Keamanan</div>
+            <div className="tag" style={{ display: "inline-flex", marginBottom: 16 }}>Trust & Security</div>
             <h2 className="text-display" style={{ marginBottom: 16 }}>
-              Dibangun di Atas{" "}
+              Built on a{" "}
               <span
                 style={{
                   background: "linear-gradient(135deg, #F5C842, #D4AF37)",
@@ -1074,11 +1074,11 @@ export default function HomePage() {
                   backgroundClip: "text",
                 }}
               >
-                Fondasi Kokoh
+                Solid Foundation
               </span>
             </h2>
             <p style={{ fontSize: 15, color: "var(--text-tertiary)", maxWidth: 450, margin: "0 auto", lineHeight: 1.7 }}>
-              Regulated, audited, dan dikelola oleh lembaga terpercaya Indonesia.
+              Regulated, audited, and managed by Indonesia&apos;s most trusted institutions.
             </p>
           </div>
 
@@ -1088,13 +1088,13 @@ export default function HomePage() {
                 icon: Shield,
                 title: "Token Issuer",
                 name: "PT. Sejahtera Bersama Nano",
-                points: ["Issuer GLDN token", "KYC/AML compliance", "KPD arrangement", "Commercial operations"],
+                points: ["IDDF-MSCI token issuer", "KYC/AML compliance", "KPD arrangement", "Commercial operations"],
               },
               {
                 icon: TrendingUp,
                 title: "Investment Manager",
                 name: "STAR Asset Management",
-                points: ["Rp 30T+ AUM", "8M+ SID Registrations", "#13 Fixed Income MF", "ISO 9001/27001 certified"],
+                points: ["IDR 30T+ AUM", "8M+ Investor Accounts", "#13 Fixed Income MF", "ISO 9001/27001 certified"],
                 featured: true,
               },
               {
@@ -1144,8 +1144,8 @@ export default function HomePage() {
           <div className="card p-6 reveal">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
               {[
-                { value: "Rp 30T+", label: "AUM by STAR AM" },
-                { value: "8M+", label: "SID Registrations" },
+                { value: "IDR 30T+", label: "AUM by STAR AM" },
+                { value: "8M+", label: "Investor Accounts" },
                 { value: "#13", label: "Fixed Income MF Ranking" },
                 { value: "4x", label: "ISO Certifications" },
               ].map((s) => (
@@ -1167,27 +1167,27 @@ export default function HomePage() {
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-12 reveal">
-            <h2 className="text-heading-1" style={{ marginBottom: 12 }}>Pertanyaan Umum</h2>
-            <p style={{ fontSize: 15, color: "var(--text-tertiary)" }}>Hal yang paling sering ditanyakan investor GLDN.</p>
+            <h2 className="text-heading-1" style={{ marginBottom: 12 }}>Frequently Asked Questions</h2>
+            <p style={{ fontSize: 15, color: "var(--text-tertiary)" }}>The most common questions from IDDF-MSCI investors.</p>
           </div>
 
           <div className="space-y-2 reveal">
             {[
               {
-                q: "Apa bedanya GLDN dengan cryptocurrency biasa?",
-                a: "GLDN adalah RWA token — nilainya mengikuti NAV fund profesional, bukan spekulasi pasar. Setiap token di-backed oleh aset nyata dalam Discretionary Mandate yang dikelola STAR AM.",
+                q: "How is IDDF-MSCI different from regular cryptocurrency?",
+                a: "IDDF-MSCI is an RWA token — its value tracks a professional fund's NAV, not market speculation. Every token is backed by real assets held in a Discretionary Mandate managed by STAR AM.",
               },
               {
-                q: "Berapa minimum investasi?",
-                a: "Mulai dari Rp 100.000 melalui exchange partner. Tidak ada batas maksimum (investasi >Rp 1M mungkin memerlukan enhanced due diligence).",
+                q: "What is the minimum investment?",
+                a: "Starting from IDR 100,000 through our exchange partners. There is no maximum limit (investments above IDR 1M may require enhanced due diligence).",
               },
               {
-                q: "Bagaimana cara menjual/redeem GLDN?",
-                a: "Submit redemption request di exchange. Proses 2–3 hari kerja: token diburn, STAR AM likuidasi posisi, proceeds dikembalikan dalam IDR atau stablecoin.",
+                q: "How do I sell or redeem IDDF-MSCI?",
+                a: "Submit a redemption request on your exchange. The process takes 2–3 business days: tokens are burned, STAR AM liquidates positions, and proceeds are returned in IDR or stablecoins.",
               },
               {
-                q: "Apakah ada lock-up period?",
-                a: "Tidak ada lock-up period. Namun karena underlying adalah KPD, redemption membutuhkan 2–3 hari kerja untuk settlement. Large redemptions mungkin diqueue.",
+                q: "Is there a lock-up period?",
+                a: "There is no lock-up period. However, because the underlying asset is a KPD, redemptions require 2–3 business days for settlement. Large redemptions may be queued.",
               },
             ].map((item, i) => (
               <FAQItem key={i} q={item.q} a={item.a} />
@@ -1209,9 +1209,9 @@ export default function HomePage() {
         />
         <div className="max-w-3xl mx-auto px-6 text-center relative">
           <div className="reveal">
-            <div className="tag" style={{ display: "inline-flex", marginBottom: 20 }}>Siap Memulai?</div>
+            <div className="tag" style={{ display: "inline-flex", marginBottom: 20 }}>Ready to Start?</div>
             <h2 className="text-display-lg" style={{ marginBottom: 20 }}>
-              Investasi{" "}
+              Smart Investing{" "}
               <span
                 style={{
                   fontStyle: "italic",
@@ -1221,9 +1221,8 @@ export default function HomePage() {
                   backgroundClip: "text",
                 }}
               >
-                Cerdas
-              </span>{" "}
-              Dimulai Hari Ini
+                Starts Today
+              </span>
             </h2>
             <p
               style={{
@@ -1235,8 +1234,8 @@ export default function HomePage() {
                 margin: "0 auto 36px",
               }}
             >
-              Bergabung dengan ribuan investor yang mengakses strategi Gold-Equity rotation profesional
-              melalui GLDN token. Mulai dari Rp 100.000.
+              Join thousands of investors accessing a professional Gold-Equity rotation strategy
+              through IDDF-MSCI. Start from as little as IDR 100,000.
             </p>
 
             <div className="flex flex-wrap gap-3 justify-center mb-10">
@@ -1245,7 +1244,7 @@ export default function HomePage() {
                 Download Whitepaper
               </button>
               <a href="#about" className="btn-ghost flex items-center gap-2" style={{ padding: "12px 24px", fontSize: 15, textDecoration: "none" }}>
-                Pelajari Lebih Lanjut
+                Learn More
                 <ArrowRight size={14} />
               </a>
             </div>
@@ -1261,7 +1260,7 @@ export default function HomePage() {
                 lineHeight: 1.5,
               }}
             >
-              {["KYC required · OJK compliant", "Tidak ada lock-up period", "Redemption T+2-3 hari kerja"].map((t) => (
+              {["KYC required · OJK compliant", "No lock-up period", "Redemption T+2–3 business days"].map((t) => (
                 <span key={t} className="flex items-center gap-1.5">
                   <div style={{ width: 4, height: 4, borderRadius: "50%", background: "var(--gold-deep)", flexShrink: 0 }} />
                   {t}
@@ -1291,31 +1290,31 @@ export default function HomePage() {
                     display: "flex", alignItems: "center", justifyContent: "center",
                   }}
                 >
-                  <span style={{ color: "#080706", fontWeight: 700, fontSize: 10 }}>G</span>
+                  <span style={{ color: "#080706", fontWeight: 700, fontSize: 10 }}>M</span>
                 </div>
-                <span style={{ color: "var(--text-primary)", fontSize: 14, fontWeight: 600, letterSpacing: "-0.02em" }}>GLDN</span>
+                <span style={{ color: "var(--text-primary)", fontSize: 14, fontWeight: 600, letterSpacing: "-0.02em" }}>IDDF-MSCI</span>
               </div>
               <p style={{ fontSize: 12, color: "var(--text-muted)", lineHeight: 1.7 }}>
-                Real World Asset Token untuk akses ke Gold-Equity rotation fund profesional.
+                Real World Asset Token providing access to a professional Gold-Equity rotation fund.
               </p>
             </div>
 
             {[
               {
-                title: "Produk",
-                links: ["Tentang GLDN", "Tokenomics", "Smart Contract", "Roadmap"],
+                title: "Product",
+                links: ["About IDDF-MSCI", "Tokenomics", "Smart Contract", "Roadmap"],
               },
               {
                 title: "Resources",
-                links: ["Whitepaper", "FAQs", "Edukasi", "Risk Disclosure"],
+                links: ["Whitepaper", "FAQs", "Education", "Risk Disclosure"],
               },
               {
-                title: "Investasi",
+                title: "Invest",
                 links: ["Exchange Partners", "Direct Investment", "KYC Process", "Fee Structure"],
               },
               {
                 title: "Support",
-                links: ["Help Center", "Hubungi Kami", "Telegram", "Instagram"],
+                links: ["Help Center", "Contact Us", "Telegram", "Instagram"],
               },
             ].map((col) => (
               <div key={col.title}>

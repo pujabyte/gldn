@@ -517,8 +517,9 @@ export default function HomePage() {
                   }}
                 >
                   Gold‑Equity
-                </em>{" "}
-                Strategy, Now On‑Chain
+                </em>
+                <br />
+                <span style={{ whiteSpace: "nowrap" }}>Strategy, Now On‑Chain</span>
               </h1>
 
               <p
@@ -532,10 +533,12 @@ export default function HomePage() {
                 }}
               >
                 IDDF-MSCI gives you fractional exposure to the{" "}
-                <strong style={{ color: "var(--text-primary)", fontWeight: 500 }}>MSCI ID Digital Funds</strong> —
-                a professionally managed Equity-Gold Rotation strategy by{" "}
-                <strong style={{ color: "var(--text-primary)", fontWeight: 500 }}>STAR Asset Management</strong>,
-                IDR 30T+ AUM, available 24/7 on-chain.
+                <strong style={{ color: "var(--text-primary)", fontWeight: 500, whiteSpace: "nowrap" }}>MSCI ID Digital Funds</strong> —
+                a professionally managed{" "}
+                <span style={{ whiteSpace: "nowrap" }}>Equity-Gold Rotation</span> strategy by{" "}
+                <strong style={{ color: "var(--text-primary)", fontWeight: 500, whiteSpace: "nowrap" }}>STAR Asset Management</strong>,{" "}
+                <span style={{ whiteSpace: "nowrap" }}>IDR 30T+ AUM</span>, available{" "}
+                <span style={{ whiteSpace: "nowrap" }}>24/7 on-chain.</span>
               </p>
 
               {/* CTA row */}

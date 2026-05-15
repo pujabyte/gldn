@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Google Fonts: Cormorant Garamond (display) + Plus Jakarta Sans (body) ─── */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+/* ─── CSS Custom Properties ─── */
+:root {
+  /* Canvas */
+  --bg-base:    #080706;
+  --bg-panel:   #0f0e0c;
+  --bg-surface: #191714;
+  --bg-raised:  #242118;
+
+  /* Gold palette */
+  --gold-bright:  #F5C842;
+  --gold-mid:     #D4AF37;
+  --gold-muted:   #B8960C;
+  --gold-deep:    #8a6c0a;
+  --gold-glow:    rgba(212, 175, 55, 0.15);
+  --gold-border:  rgba(212, 175, 55, 0.18);
+  --gold-border-subtle: rgba(212, 175, 55, 0.08);
+
+  /* Text */
+  --text-primary:   #f7f4ef;
+  --text-secondary: #c8c0ae;
+  --text-tertiary:  #7a7060;
+  --text-muted:     #4a4438;
+
+  /* Borders */
+  --border-default: rgba(255, 255, 255, 0.07);
+  --border-subtle:  rgba(255, 255, 255, 0.04);
+  --border-gold:    rgba(212, 175, 55, 0.18);
+  --border-gold-subtle: rgba(212, 175, 55, 0.08);
+
+  /* Font features */
+  --font-features: "cv01", "ss03";
+}
+
+/* ─── Base reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* ─── Typography ─── */
+.font-display {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+/* Display sizes */
+.text-display-xl {
+  font-size: clamp(2.4rem, 4.5vw, 3.75rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.text-display-lg {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: -0.035em;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.text-display {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.text-heading-1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* ─── Gold gradient text ─── */
+.text-gold {
+  background: linear-gradient(135deg, #F5C842 0%, #D4AF37 50%, #F5C842 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 100%;
+  animation: gold-shimmer 4s ease infinite;
+}
+
+.text-gold-static {
+  color: var(--gold-mid);
+}
+
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ─── Gold glow effect ─── */
+.gold-glow {
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.15), 0 0 80px rgba(212, 175, 55, 0.05);
+}
+
+.gold-glow-sm {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.12);
+}
+
+/* ─── Card styles ─── */
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-default);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--border-gold);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.08);
+}
+
+.card-gold {
+  background: rgba(212, 175, 55, 0.04);
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+}
+
+/* ─── Button styles ─── */
+.btn-primary {
+  background: linear-gradient(135deg, #D4AF37 0%, #F5C842 50%, #D4AF37 100%);
+  background-size: 200% 100%;
+  color: #080706;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  background-position: 100% 0;
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-gold-subtle);
+  color: var(--text-primary);
+}
+
+/* ─── Navigation ─── */
+.nav-link {
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+/* ─── Stat value display ─── */
+.stat-value {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--gold-bright);
+  line-height: 1.2;
+}
+
+.stat-value-lg {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--gold-bright);
+  line-height: 1.0;
+}
+
+/* ─── Gradient mesh background ─── */
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 80% 50%, rgba(212, 175, 55, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 30% 30% at 20% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.section-gradient {
+  background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+}
+
+/* ─── Grain texture overlay ─── */
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+}
+
+/* ─── Divider line ─── */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.15) 30%, rgba(212, 175, 55, 0.15) 70%, transparent 100%);
+}
+
+/* ─── Scroll-triggered reveal ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Allocation Ring animation ─── */
+@keyframes ring-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes ring-rotate-rev {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { opacity: 0.6; }
+  50%       { opacity: 1; }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@media (min-width: 1024px) {
+  .token-scale-desktop {
+    transform: scale(1.2);
+    transform-origin: center center;
+  }
+}
+
+/* ─── Performance chart bars ─── */
+.bar-fill {
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Tag / pill ─── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid var(--border-gold);
+  color: var(--gold-mid);
+  background: rgba(212, 175, 55, 0.06);
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.3); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(212, 175, 55, 0.5); }
+
+/* ─── Selection ─── */
+::selection {
+  background: rgba(212, 175, 55, 0.25);
+  color: var(--text-primary);
+}
